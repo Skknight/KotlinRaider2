@@ -138,8 +138,9 @@ class Battle {
                 println("")
                 Move.flag()
                 break
-            } else {
-                //ボスはまだ生きっている
+            }
+            //ボスはまだ生きっている
+            else {
                 println("ボスのHP：$bossHP")
                 println("ボスの攻撃")
                 diceroll()

@@ -117,6 +117,17 @@ class Move {
             }
 
             //戦闘
+            fun enemyBattle(){
+                if (bat1.EnemyHP >= 0) {
+                    println("")
+                    println("敵！")
+                    bat1.battle()
+                } else {
+                    println("")
+                    println("敵はもう死んでいる")
+                    println("")
+                }
+            }
             if (room.cont === "enemy") {
                 //敵のHPがゼロの場合
                 if (Kotlinraider.enemies.enemyHP <= 0) {
@@ -129,16 +140,7 @@ class Move {
                         println("")
                         println("煙幕もうない")
                         println("戦うしかない")
-                        if (bat1.EnemyHP >= 0) {
-                            println("")
-                            println("敵！")
-                            bat1.battle()
-                        } else {
-                            println("")
-                            println("敵はもう死んでいる")
-                            println("")
-                        }
-
+                        enemyBattle()
                     } else
                         //煙幕がある場合
                         if (Kotlinraider.player1.smoke >= 0) {
@@ -169,15 +171,7 @@ class Move {
                                     println("お前のステルス状態は: $stealth")
                                     println("ステルス状態はが足りない")
                                     println("戦うしかない")
-                                    if (bat1.EnemyHP >= 0) {
-                                        println("")
-                                        println("敵！")
-                                        bat1.battle()
-                                    } else {
-                                        println("")
-                                        println("敵はもう死んでいる")
-                                        println("")
-                                    }
+                                    enemyBattle()
                                 }
                             }
                             //煙幕を使わない時
@@ -204,6 +198,17 @@ class Move {
             }
 
             //ボスと戦闘
+            fun bossBattle(){
+                if (bat1.bossHP >= 0) {
+                    println("")
+                    println("ボス！")
+                    bat1.bossBattle()
+                } else {
+                    println("")
+                    println("ボスはもう死んでいる")
+                    println("")
+                }
+            }
             if (room.cont === "boss") {
                 //ボスのHPがゼロの場合
                 if (Kotlinraider.enemies.bossHP <= 0) {
@@ -217,15 +222,7 @@ class Move {
                         println("ボスルーム")
                         println("お前はボスをそらすのに十分な煙幕がない")
                         println("ボスを戦うしかない")
-                        if (bat1.bossHP >= 0) {
-                            println("")
-                            println("ボス！")
-                            bat1.bossBattle()
-                        } else {
-                            println("")
-                            println("ボスはもう死んでいる")
-                            println("")
-                        }
+                        bossBattle()
                     }
                     //煙幕がある場合
                     if (Kotlinraider.player1.smoke >= 3) {
@@ -252,15 +249,7 @@ class Move {
                                 } else {
                                     println("ステルス状態はが足りない")
                                     println("普通に戦うしかない")
-                                    if (bat1.bossHP >= 0) {
-                                        println("")
-                                        println("ボス！")
-                                        bat1.bossBattle()
-                                    } else {
-                                        println("")
-                                        println("ボスはもう死んでいる")
-                                        println("")
-                                    }
+                                    bossBattle()
                                 }
                             }
                             //煙幕を使わない時

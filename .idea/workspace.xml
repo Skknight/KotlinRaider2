@@ -2,26 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="be57e720-f051-4d01-bb1c-3d0c03ac4341" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/KotlinRaider2/Kotlinraider$Companion.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KotlinRaider2/Kotlinraider$Companion.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/KotlinRaider2/Kotlinraider.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KotlinRaider2/Kotlinraider.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/KotlinRaider2/META-INF/KotlinRaider2.kotlin_module" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KotlinRaider2/META-INF/KotlinRaider2.kotlin_module" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/KotlinRaider2/MainKt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KotlinRaider2/MainKt.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/KotlinRaider2/Move.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KotlinRaider2/Move.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/KotlinRaider2/constants/Directions.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KotlinRaider2/constants/Directions.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/KotlinRaider2/data/EnemySetup.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KotlinRaider2/data/EnemySetup.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/KotlinRaider2/data/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KotlinRaider2/data/Player.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/KotlinRaider2/data/Room.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/KotlinRaider2/data/RoomKt.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Battle.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Battle.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Kotlinraider.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Kotlinraider.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Map.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Map.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Move.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Move.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/constants/Directions.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/Directions.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/EnemySetup.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/EnemySetup.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/Player.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/Player.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/Room.kt" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -56,11 +41,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Move.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="5" lean-forward="true" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+            <state relative-caret-position="3765">
+              <caret line="251" column="48" selection-start-line="251" selection-start-column="48" selection-end-line="251" selection-end-column="48" />
               <folding>
                 <element signature="e#0#46#0" expanded="true" />
               </folding>
@@ -71,8 +56,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Map.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" selection-start-line="3" selection-end-line="6" selection-end-column="3" />
+            <state relative-caret-position="645">
+              <caret line="43" column="23" selection-start-line="43" selection-start-column="23" selection-end-line="43" selection-end-column="23" />
               <folding>
                 <element signature="e#0#46#0" expanded="true" />
               </folding>
@@ -80,11 +65,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Battle.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="513">
-              <caret line="161" column="17" selection-start-line="161" selection-start-column="17" selection-end-line="161" selection-end-column="17" />
+            <state relative-caret-position="245">
+              <caret line="100" column="17" lean-forward="true" selection-start-line="100" selection-start-column="17" selection-end-line="100" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -157,10 +142,10 @@
         <option value="$PROJECT_DIR$/src/data/EnemySetup.kt" />
         <option value="$PROJECT_DIR$/src/Main.kt" />
         <option value="$PROJECT_DIR$/src/Kotlinraider.kt" />
-        <option value="$PROJECT_DIR$/src/Move.kt" />
-        <option value="$PROJECT_DIR$/src/Map.kt" />
         <option value="$PROJECT_DIR$/src/Rooms.kt" />
         <option value="$PROJECT_DIR$/src/Battle.kt" />
+        <option value="$PROJECT_DIR$/src/Map.kt" />
+        <option value="$PROJECT_DIR$/src/Move.kt" />
       </list>
     </option>
   </component>
@@ -370,16 +355,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Move.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="5" lean-forward="true" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
-          <folding>
-            <element signature="e#0#46#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Rooms.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -389,8 +364,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Map.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" selection-start-line="3" selection-end-line="6" selection-end-column="3" />
+        <state relative-caret-position="645">
+          <caret line="43" column="23" selection-start-line="43" selection-start-column="23" selection-end-line="43" selection-end-column="23" />
           <folding>
             <element signature="e#0#46#0" expanded="true" />
           </folding>
@@ -399,8 +374,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Battle.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="161" column="17" selection-start-line="161" selection-start-column="17" selection-end-line="161" selection-end-column="17" />
+        <state relative-caret-position="245">
+          <caret line="100" column="17" lean-forward="true" selection-start-line="100" selection-start-column="17" selection-end-line="100" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Move.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3765">
+          <caret line="251" column="48" selection-start-line="251" selection-start-column="48" selection-end-line="251" selection-end-column="48" />
+          <folding>
+            <element signature="e#0#46#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

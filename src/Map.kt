@@ -37,10 +37,11 @@ class Map {
             for (j in 0..4) {
                 var room = ROOMS()
                 roomArray[i][j] = room
-
-                room.cont = inside() //contents
+                //コンテンツ
+                room.cont = inside()
                 room.status = random.nextInt(8) + 1
-                //possible exits
+
+                //出口の設定
                 var v = 0
                 while (v < 4) {
                     var directions:Directions = room.dir[random.nextInt(5)]
@@ -89,37 +90,37 @@ class Map {
                 if (room.cont.equals("loot") && f >= 0) {
                     room.takara = random.nextInt(3) + 1
                     f--
-                } else
-                    //部屋の中に敵がいる
-                    if (room.cont.equals("enemy") && d != 2) {
+                }
+                //部屋の中に敵がいる
+                else if (room.cont.equals("enemy") && d != 2) {
                     room.enemy = 1
                     d++
-                } else
-                    //部屋の中に煙幕がある
-                    if (room.cont.equals("enmaku") && c != 4) {
+                } //部屋の中に煙幕がある
+                else if (room.cont.equals("enmaku") && c != 4) {
                     room.enmaku = 1
                     c++
-                } else
-                    //部屋の中に剣がある
-                    if (room.cont.equals("sword") && z != 2) {
+                }
+                //部屋の中に剣がある
+                else if (room.cont.equals("sword") && z != 2) {
                     room.sword = 1
                     z++
                     if (i == 5 && z != 0) {
                         i = 0
                     }
-                } else
-                    //部屋の中にボスがいる
-                    if (room.cont.equals("enemy") && d == 2 && b != 1) {
+                }
+                //部屋の中にボスがいる
+                else if (room.cont.equals("enemy") && d == 2 && b != 1) {
                     room.cont = "boss"
                     room.boss = 1
                     room.takara = 4
                     b++
-                } else
-                    //部屋の中に何もない
-                    if (room.cont.equals("empty") && e <= 6) {
+                }
+                //部屋の中に何もない
+                else if (room.cont.equals("empty") && e <= 6) {
                     e++
-                } else {
-                    //部屋の中に宝がある
+                }
+                //部屋の中に宝がある
+                else {
                     room.cont = "loot"
                     room.takara = random.nextInt(3) + 3
                 }
