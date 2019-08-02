@@ -189,8 +189,9 @@ class Move {
                             }
                             //入力エラー
                         } else {
+                            println("------------------------")
                             println("誤った入力")
-                            println("")
+                            println("------------------------")
                             continue
                         }
                     }
@@ -266,9 +267,9 @@ class Move {
                             }
                             //入力エラー
                         } else {
-                            println("")
+                            println("------------------------")
                             println("誤った入力")
-                            println("")
+                            println("------------------------")
                             continue
                         }
                     }

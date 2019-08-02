@@ -1,26 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <list default="true" id="be57e720-f051-4d01-bb1c-3d0c03ac4341" name="Default Changelist" comment="" />
-=======
-=======
->>>>>>> Comment
     <list default="true" id="be57e720-f051-4d01-bb1c-3d0c03ac4341" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/out/production/KotlinRaider2/data/Room.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/KotlinRaider2/data/RoomKt.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Battle.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Battle.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Map.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Map.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/KotlinRaider2/Battle.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KotlinRaider2/Battle.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/KotlinRaider2/Kotlinraider$Companion.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KotlinRaider2/Kotlinraider$Companion.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/KotlinRaider2/Kotlinraider.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KotlinRaider2/Kotlinraider.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/KotlinRaider2/META-INF/KotlinRaider2.kotlin_module" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KotlinRaider2/META-INF/KotlinRaider2.kotlin_module" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/KotlinRaider2/MainKt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KotlinRaider2/MainKt.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/KotlinRaider2/Map.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KotlinRaider2/Map.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/KotlinRaider2/Move$Companion.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KotlinRaider2/Move$Companion.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/KotlinRaider2/Move$moving$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KotlinRaider2/Move$moving$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/KotlinRaider2/Move$moving$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KotlinRaider2/Move$moving$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/KotlinRaider2/Move.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KotlinRaider2/Move.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/KotlinRaider2/ROOMS.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KotlinRaider2/ROOMS.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/KotlinRaider2/constants/Directions.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KotlinRaider2/constants/Directions.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/KotlinRaider2/data/EnemySetup.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KotlinRaider2/data/EnemySetup.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/KotlinRaider2/data/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KotlinRaider2/data/Player.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Move.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Move.kt" afterDir="false" />
     </list>
-<<<<<<< HEAD
->>>>>>> c057437b7d704e48d639689f30c3bf01575911e3
-=======
-=======
-    <list default="true" id="be57e720-f051-4d01-bb1c-3d0c03ac4341" name="Default Changelist" comment="" />
->>>>>>> master
->>>>>>> Comment
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,48 +30,14 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main.kt">
           <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-<<<<<<< HEAD
-            <state relative-caret-position="90">
-              <caret line="7" selection-start-line="7" selection-end-line="7" />
-=======
-            <state relative-caret-position="210">
-              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="17" selection-end-column="3" />
->>>>>>> c057437b7d704e48d639689f30c3bf01575911e3
-=======
-            <state relative-caret-position="210">
-              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="17" selection-end-column="3" />
-=======
-            <state relative-caret-position="90">
-              <caret line="7" selection-start-line="7" selection-end-line="7" />
->>>>>>> master
->>>>>>> Comment
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Kotlinraider.kt">
-          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="60">
-<<<<<<< HEAD
-<<<<<<< HEAD
-              <caret line="4" selection-start-line="4" selection-end-line="4" />
-=======
-              <caret line="4" selection-start-line="4" selection-end-line="9" selection-end-column="3" />
->>>>>>> c057437b7d704e48d639689f30c3bf01575911e3
-=======
-              <caret line="4" selection-start-line="4" selection-end-line="9" selection-end-column="3" />
-=======
-              <caret line="4" selection-start-line="4" selection-end-line="4" />
->>>>>>> master
->>>>>>> Comment
+              <caret line="4" column="30" lean-forward="true" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="30" />
               <folding>
-                <element signature="e#0#99#0" expanded="true" />
+                <element signature="e#0#51#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -82,94 +46,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Move.kt">
           <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-<<<<<<< HEAD
-            <state relative-caret-position="45">
-              <caret line="3" column="3" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="3" />
-=======
-            <state relative-caret-position="3765">
-              <caret line="251" column="48" selection-start-line="251" selection-start-column="48" selection-end-line="251" selection-end-column="48" />
->>>>>>> c057437b7d704e48d639689f30c3bf01575911e3
-=======
-            <state relative-caret-position="3765">
-              <caret line="251" column="48" selection-start-line="251" selection-start-column="48" selection-end-line="251" selection-end-column="48" />
-=======
-            <state relative-caret-position="45">
-              <caret line="3" column="3" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="3" />
->>>>>>> master
->>>>>>> Comment
+            <state relative-caret-position="172">
+              <caret line="191" column="63" selection-start-line="191" selection-start-column="63" selection-end-line="191" selection-end-column="63" />
               <folding>
                 <element signature="e#0#46#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Map.kt">
-          <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-<<<<<<< HEAD
-            <state relative-caret-position="450">
-              <caret line="30" column="23" selection-start-line="30" selection-start-column="23" selection-end-line="30" selection-end-column="23" />
-=======
-            <state relative-caret-position="645">
-              <caret line="43" column="23" selection-start-line="43" selection-start-column="23" selection-end-line="43" selection-end-column="23" />
->>>>>>> c057437b7d704e48d639689f30c3bf01575911e3
-=======
-            <state relative-caret-position="645">
-              <caret line="43" column="23" selection-start-line="43" selection-start-column="23" selection-end-line="43" selection-end-column="23" />
-=======
-            <state relative-caret-position="450">
-              <caret line="30" column="23" selection-start-line="30" selection-start-column="23" selection-end-line="30" selection-end-column="23" />
->>>>>>> master
->>>>>>> Comment
-              <folding>
-                <element signature="e#0#46#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Battle.kt">
-          <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-<<<<<<< HEAD
-            <state relative-caret-position="-160">
-              <caret line="73" column="17" selection-start-line="73" selection-start-column="17" selection-end-line="73" selection-end-column="17" />
-=======
-            <state relative-caret-position="245">
-              <caret line="100" column="17" lean-forward="true" selection-start-line="100" selection-start-column="17" selection-end-line="100" selection-end-column="44" />
->>>>>>> c057437b7d704e48d639689f30c3bf01575911e3
-=======
-            <state relative-caret-position="245">
-              <caret line="100" column="17" lean-forward="true" selection-start-line="100" selection-start-column="17" selection-end-line="100" selection-end-column="44" />
-=======
-            <state relative-caret-position="-160">
-              <caret line="73" column="17" selection-start-line="73" selection-start-column="17" selection-end-line="73" selection-end-column="17" />
->>>>>>> master
->>>>>>> Comment
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Rooms.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-<<<<<<< HEAD
-<<<<<<< HEAD
-              <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="13" />
-=======
-              <caret line="4" column="4" lean-forward="true" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="13" />
->>>>>>> c057437b7d704e48d639689f30c3bf01575911e3
-=======
-              <caret line="4" column="4" lean-forward="true" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="13" />
-=======
-              <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="13" />
->>>>>>> master
->>>>>>> Comment
             </state>
           </provider>
         </entry>
@@ -252,6 +133,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -264,24 +147,10 @@
               <item name="KotlinRaider2" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="KotlinRaider2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KotlinRaider2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="constants" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="KotlinRaider2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KotlinRaider2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -341,7 +210,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <frame x="0" y="23" width="1440" height="823" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Designer" order="0" />
@@ -349,12 +218,12 @@
       <window_info id="Capture Tool" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Image Layers" order="4" />
-      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.17381974" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.24964234" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Messages" order="0" weight="0.2433735" />
-      <window_info anchor="bottom" id="Terminal" order="1" />
+      <window_info anchor="bottom" id="Messages" order="0" weight="0.23529412" />
+      <window_info anchor="bottom" id="Terminal" order="1" weight="0.27222982" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="3" />
+      <window_info anchor="bottom" id="Version Control" order="3" weight="0.32968536" />
       <window_info anchor="bottom" id="Message" order="4" />
       <window_info anchor="bottom" id="Find" order="5" weight="0.32891566" />
       <window_info anchor="bottom" id="Debug" order="6" weight="0.4" />
@@ -422,52 +291,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/data/Room.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="23" lean-forward="true" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.kt">
-      <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <state relative-caret-position="90">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-=======
-        <state relative-caret-position="210">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="17" selection-end-column="3" />
->>>>>>> c057437b7d704e48d639689f30c3bf01575911e3
-=======
-        <state relative-caret-position="210">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="17" selection-end-column="3" />
-=======
-        <state relative-caret-position="90">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
->>>>>>> master
->>>>>>> Comment
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/data/Room.kt" />
     <entry file="file://$PROJECT_DIR$/src/Kotlinraider.kt">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <state relative-caret-position="450">
-          <caret line="30" column="23" selection-start-line="30" selection-start-column="23" selection-end-line="30" selection-end-column="23" />
-=======
         <state relative-caret-position="60">
           <caret line="4" selection-start-line="4" selection-end-line="9" selection-end-column="3" />
->>>>>>> c057437b7d704e48d639689f30c3bf01575911e3
-=======
-        <state relative-caret-position="60">
-          <caret line="4" selection-start-line="4" selection-end-line="9" selection-end-column="3" />
-=======
-        <state relative-caret-position="450">
-          <caret line="30" column="23" selection-start-line="30" selection-start-column="23" selection-end-line="30" selection-end-column="23" />
->>>>>>> master
->>>>>>> Comment
           <folding>
             <element signature="e#0#99#0" expanded="true" />
           </folding>
@@ -477,89 +305,52 @@
     <entry file="file://$PROJECT_DIR$/src/Rooms.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
-<<<<<<< HEAD
-<<<<<<< HEAD
-          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="13" />
-=======
           <caret line="4" column="4" lean-forward="true" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="13" />
->>>>>>> c057437b7d704e48d639689f30c3bf01575911e3
-=======
-          <caret line="4" column="4" lean-forward="true" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="13" />
-=======
-          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="13" />
->>>>>>> master
->>>>>>> Comment
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Map.kt">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <state relative-caret-position="-160">
-          <caret line="73" column="17" selection-start-line="73" selection-start-column="17" selection-end-line="73" selection-end-column="17" />
-=======
-=======
->>>>>>> Comment
         <state relative-caret-position="645">
           <caret line="43" column="23" selection-start-line="43" selection-start-column="23" selection-end-line="43" selection-end-column="23" />
           <folding>
             <element signature="e#0#46#0" expanded="true" />
           </folding>
-<<<<<<< HEAD
->>>>>>> c057437b7d704e48d639689f30c3bf01575911e3
-=======
-=======
-        <state relative-caret-position="-160">
-          <caret line="73" column="17" selection-start-line="73" selection-start-column="17" selection-end-line="73" selection-end-column="17" />
->>>>>>> master
->>>>>>> Comment
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Battle.kt">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
         <state relative-caret-position="245">
           <caret line="100" column="17" lean-forward="true" selection-start-line="100" selection-start-column="17" selection-end-line="100" selection-end-column="44" />
-=======
->>>>>>> Comment
-        <state relative-caret-position="60">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6990">
+          <caret line="466" selection-start-line="466" selection-end-line="466" />
           <folding>
-            <element signature="e#0#99#0" expanded="true" />
+            <element signature="e#5570#5576#0" expanded="true" />
+            <element signature="e#5580#5586#0" expanded="true" />
           </folding>
-<<<<<<< HEAD
-=======
-        <state relative-caret-position="245">
-          <caret line="100" column="17" lean-forward="true" selection-start-line="100" selection-start-column="17" selection-end-line="100" selection-end-column="44" />
->>>>>>> c057437b7d704e48d639689f30c3bf01575911e3
-=======
->>>>>>> master
->>>>>>> Comment
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="30" lean-forward="true" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#51#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Move.kt">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <state relative-caret-position="45">
-          <caret line="3" column="3" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="3" />
-=======
-        <state relative-caret-position="3765">
-          <caret line="251" column="48" selection-start-line="251" selection-start-column="48" selection-end-line="251" selection-end-column="48" />
->>>>>>> c057437b7d704e48d639689f30c3bf01575911e3
-=======
-        <state relative-caret-position="3765">
-          <caret line="251" column="48" selection-start-line="251" selection-start-column="48" selection-end-line="251" selection-end-column="48" />
-=======
-        <state relative-caret-position="45">
-          <caret line="3" column="3" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="3" />
->>>>>>> master
->>>>>>> Comment
+        <state relative-caret-position="172">
+          <caret line="191" column="63" selection-start-line="191" selection-start-column="63" selection-end-line="191" selection-end-column="63" />
           <folding>
             <element signature="e#0#46#0" expanded="true" />
           </folding>
