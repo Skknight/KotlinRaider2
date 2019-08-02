@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="be57e720-f051-4d01-bb1c-3d0c03ac4341" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Battle.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Battle.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Kotlinraider.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Kotlinraider.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Map.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Map.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Move.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Move.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Rooms.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Rooms.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/constants/Directions.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/Directions.kt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -49,8 +44,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Move.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2370">
-              <caret line="158" column="42" selection-start-line="158" selection-start-column="42" selection-end-line="158" selection-end-column="42" />
+            <state relative-caret-position="296">
+              <caret line="472" column="60" selection-start-line="472" selection-start-column="60" selection-end-line="472" selection-end-column="60" />
               <folding>
                 <element signature="e#0#46#0" expanded="true" />
               </folding>
@@ -112,6 +107,7 @@
       <find>userinput</find>
       <find>right</find>
       <find>Smoke Bombs</find>
+      <find>Try again</find>
     </findStrings>
     <replaceStrings>
       <replace>room!!</replace>
@@ -123,6 +119,7 @@
       <replace>scannedRoom</replace>
       <replace>Right</replace>
       <replace>煙幕</replace>
+      <replace>もう一度入力して</replace>
     </replaceStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/src</dir>
@@ -386,8 +383,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Move.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2370">
-          <caret line="158" column="42" selection-start-line="158" selection-start-column="42" selection-end-line="158" selection-end-column="42" />
+        <state relative-caret-position="296">
+          <caret line="472" column="60" selection-start-line="472" selection-start-column="60" selection-end-line="472" selection-end-column="60" />
           <folding>
             <element signature="e#0#46#0" expanded="true" />
           </folding>

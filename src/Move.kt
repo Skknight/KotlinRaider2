@@ -23,10 +23,10 @@ class Move {
 
         while (gameActive) {
             //map
-            println("プレイヤーHP： " + Kotlinraider.player1.playerHP)
-            println("煙幕:  " + Kotlinraider.player1.smoke)
-            println("宝: " + Kotlinraider.player1.takara)
-            println("レーダー: " + Kotlinraider.player1.radar)
+            println("プレイヤーHP： ${Kotlinraider.player1.playerHP}")
+            println("煙幕: ${Kotlinraider.player1.smoke}")
+            println("宝: ${Kotlinraider.player1.takara}")
+            println("レーダー: ${Kotlinraider.player1.radar}")
             println("")
             println("マップ:")
             for (i in 0..4) {// prints columns
@@ -122,7 +122,7 @@ class Move {
                             if (Kotlinraider.player1.smoke !== 0) {
                                 stealth = random.nextInt(4) + 5
                                 if (room.status <= stealth) {
-                                    println("部屋のステルス状態は: " + room.status)
+                                    println("部屋のステルス状態は: ${room.status} ")
                                     println("お前のステルス状態は: $stealth")
                                     Kotlinraider.player1.smoke--
                                     println("煙幕: ${Kotlinraider.player1.smoke}")
@@ -168,78 +168,78 @@ class Move {
             if (room.cont === "boss") {
                 if (Kotlinraider.enemies.bossHP <= 0) {
                     println("")
-                    println("The boss is dead")
+                    println("ボスはもう死んでいる")
                     println("")
                 } else {
                     if (Kotlinraider.enemies.bossHP <= 0) {
                         println("")
-                        println("The boss is dead")
+                        println("ボスはもう死んでいる")
                         println("")
                         break
                     }
                     if (Kotlinraider.player1.smoke < 3) {
                         println("")
-                        println("Boss Room")
-                        println("You have not enough smokes to distract him")
-                        println("Prepare to fight the Boss")
+                        println("ボスルーム")
+                        println("お前はボスをそらすのに十分な煙幕がない")
+                        println("ボスを戦うしかない")
                         if (bat1.bossHP >= 0) {
                             println("")
-                            println("BOSS")
+                            println("ボス！")
                             bat1.bossBattle()
                         } else {
                             println("")
-                            println("The boss is dead")
+                            println("ボスはもう死んでいる")
                             println("")
                         }
                     }
 
                     if (Kotlinraider.player1.smoke >= 3) {
                         println("")
-                        println("Boss Room")
-                        println("You have enough smokes to distract him and fight")
-                        println("Use smoke? (y/n)")
+                        println("ボスルーム")
+                        println("お前はボスをそらすのに十分な煙幕があります！")
+                        println("使うか? (y/n)")
                         val sms = `in`.next()
                         if (sms == "y") {
                             var stealth = 0
                             if (Kotlinraider.player1.smoke >= 3) {
                                 stealth = 10
                                 if (room.status <= stealth) {
-                                    println("Your stealth status is: $stealth")
+                                    println("ステルス状態: $stealth")
                                     Kotlinraider.player1.smoke = 0
-                                    println("Smoke left: " + Kotlinraider.player1.smoke)
+                                    println("煙幕: ${Kotlinraider.player1.smoke}")
                                     Kotlinraider.enemies.bossHP = 200
-                                    println("Boss can't see you!")
-                                    println("Boss HP is cut in half!")
+                                    println("ボスはお前を見えない！!")
+                                    println("ボスHPが半分にカット！")
                                     println("")
                                     bat1.bossBattle()
                                 } else {
-                                    println("Your Status is too visible")
-                                    println("You have to fight him normaly")
+                                    println("ステルス状態はが足りない")
+                                    println("普通に戦うしかない")
                                     if (bat1.bossHP >= 0) {
                                         println("")
-                                        println("Boss")
+                                        println("ボス！")
                                         bat1.bossBattle()
                                     } else {
                                         println("")
-                                        println("Boss is dead")
+                                        println("ボスはもう死んでいる")
                                         println("")
                                     }
                                 }
                             }
                         } else if (sms == "n") {
-                            println("Prepare to fight")
+                            println("戦うしかない")
                             if (bat1.bossHP >= 0) {
                                 println("")
-                                println("BOSS")
+                                println("ボス！")
                                 bat1.bossBattle()
                             } else {
                                 println("")
-                                println("The Boss is dead")
+                                println("ボスはもう死んでいる")
                                 println("")
                             }
                         } else {
                             println("")
-                            println("Incorrect input")
+                            println("誤った入力")
                             println("")
                             continue
                         }
@@ -252,12 +252,12 @@ class Move {
                 if (room.sword !== 0) {
                     Kotlinraider.player1.playerWeapon = 2
                     println("")
-                    println("You got a Sword")
+                    println("剣が見つけた")
                     println("")
                     room.sword = 0
                 } else {
                     println("")
-                    println("There was a sword here")
+                    println("部屋の中に剣がありました")
                     println("")
                 }
             }
@@ -266,15 +266,15 @@ class Move {
             if (room.cont === "loot") {
                 if (room.takara !== 0) {
                     println("")
-                    println("Treasure!")
+                    println("宝!")
                     Kotlinraider.player1.takara += room.takara
-                    println("You found: "+ room.takara)
+                    println("見つけたのは：${room.takara}")
                     room.takara = 0
-                    println("You now have ${Kotlinraider.player1.takara} pieces of Gold")
+                    println("今 ${Kotlinraider.player1.takara} の宝が持っています")
                     println("")
                 } else {
                     println("")
-                    println("There was treasure here")
+                    println("部屋の中に宝がありました")
                     println("")
                 }
             }
@@ -288,14 +288,14 @@ class Move {
                     room.enmaku = 0
                 } else {
                     println("")
-                    println("Room is Empty")
+                    println("部屋の中に何もない")
                     println("")
                 }
             }
             //empty
             if (room.cont === "empty") {
                 println("")
-                println("Room is Empty")
+                println("部屋の中に何もない")
                 println("")
             }
             //check boss
@@ -306,28 +306,28 @@ class Move {
                         continue
                     } else if ((t == y) and (g == x - 1)) {
                         if (bossRoom.cont.equals("boss")) {
-                            print("Boss feels close")
+                            print("ボスが近い")
                             println("")
                         } else {
                             print("")
                         }
                     } else if ((t == y) and (g == x + 1)) {
                         if (bossRoom.cont.equals("boss")) {
-                            print("Boss feels close")
+                            print("ボスが近い")
                             println("")
                         } else {
                             print("")
                         }
                     } else if ((t == y + 1) and (g == x)) {
                         if (bossRoom.cont.equals("boss")) {
-                            print("Boss feels close")
+                            print("ボスが近い")
                             println("")
                         } else {
                             print("")
                         }
                     } else if ((t == y - 1) and (g == x)) {
                         if (bossRoom.cont.equals("boss")) {
-                            print("Boss feels close")
+                            print("ボスが近い")
                             println("")
                         } else {
                             print("")
@@ -339,9 +339,9 @@ class Move {
 
             //move and reset);
             println("")
-            println("Enter u,d,l,r (up, down, left, right)")
-            println("Enter radar to use")
-            println("Enter 1 to reset")
+            println("コントロール w, a, s, d (それそれ：上、左、下、右)")
+            println("レーダーを使うため r を入力")
+            println("リセットなら１を入力")
             val move = `in`.next()
 
             for (i in 0..20) {
@@ -352,14 +352,14 @@ class Move {
 
             //Quits
             if (move == "1") {
-                println("GAME RESET!")
+                println("リセット!")
                 newGame()
             }
             //movement commands
             var moves = true
             while (moves) {
                 var ok = 0
-                if (move == "u") {
+                if (move == "w") {
                     for (v in 0..3) {
                         val enteredDoor = room.exit[v]
                         if (enteredDoor == Directions.Up) {
@@ -368,15 +368,15 @@ class Move {
                         }
                     }
                     if (ok == 1) {
-                        println("Moved Up")
+                        println("上に動いた")
                         y--
                         moves = false
                     } else {
-                        println("Can't move that way")
-                        println("Try again")
+                        println("そちに行けない")
+                        println("もう一度入力して")
                         moves = false
                     }
-                } else if (move == "d") {
+                } else if (move == "s") {
                     ok = 0
                     for (v in 0..3) {
                         val enteredDoor = room.exit[v]
@@ -386,15 +386,15 @@ class Move {
                         }
                     }
                     if (ok == 1) {
-                        println("Moved Down")
+                        println("下に動いた")
                         y++
                         moves = false
                     } else {
-                        println("Can't move that way")
-                        println("Try again")
+                        println("そちに行けない")
+                        println("もう一度入力して")
                         moves = false
                     }
-                } else if (move == "l") {
+                } else if (move == "a") {
                     ok = 0
                     for (v in 0..3) {
                         val enteredDoor = room.exit[v]
@@ -404,15 +404,15 @@ class Move {
                         }
                     }
                     if (ok == 1) {
-                        println("Moved left")
+                        println("左に動いた")
                         x--
                         moves = false
                     } else {
-                        println("Can't move that way")
-                        println("Try again")
+                        println("そちに行けない")
+                        println("もう一度入力して")
                         moves = false
                     }
-                } else if (move == "r") {
+                } else if (move == "d") {
                     ok = 0
                     for (v in 0..3) {
                         val enteredDoor = room.exit[v]
@@ -422,15 +422,15 @@ class Move {
                         }
                     }
                     if (ok == 1) {
-                        println("Moved Right")
+                        println("右に動いた")
                         x++
                         moves = false
                     } else {
-                        println("Can't move that way")
-                        println("Try again")
+                        println("そちに行けない")
+                        println("もう一度入力して")
                         moves = false
                     }
-                } else if (move == "radar") {
+                } else if (move == "r") {
                     for (d in 0..4) {
                         for (f in 0..4) {
                             val scannedRoom = map1.roomArray[d][f]
@@ -470,12 +470,12 @@ class Move {
                     }
                     Kotlinraider.player1.radar--
                     println("")
-                    println("You have: " + Kotlinraider.player1.radar + " more radars")
+                    println("今${Kotlinraider.player1.radar}つのレーダーがあります")
                     moves = false
                     Thread.sleep(3000)
                 } else {
                     println("")
-                    println("ERROR, Invalid input")
+                    println("エラー")
                     println("")
                     moves = false
                 }
