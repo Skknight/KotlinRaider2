@@ -1,15 +1,27 @@
 import data.EnemySetup
-import java.util.Scanner
 import data.Player
 import kotlin.system.exitProcess
 
+/**
+ * Mainの見た目
+ * ゲームのルール
+ * 勝ち負け条件
+ * スコア
+ */
+
+@Suppress("DEPRECATED_IDENTITY_EQUALS")
 class Kotlinraider {
-    var score = 0;
+    //最初のスコアを設定
+    var score = 0
+    //プレイヤーと敵の設定
     companion object {
         var player1 = Player(150, 1, 1, 0, 3)
         var enemies = EnemySetup(200, 400)
     }
 
+    /**
+     * welcomeメソッド。
+     */
     fun welcome() {
         println("-----------------------")
         println("    KOUKADAI RAIDER    ")
@@ -25,6 +37,9 @@ class Kotlinraider {
         println()
     }
 
+    /**
+     * ゲームのルールのメソッド。
+     */
     fun rule() {
         var status = false
         println("-----------------------")
@@ -109,46 +124,46 @@ class Kotlinraider {
                     main()
                 }
             }
-            println("Press Enter key")
+            println("エンターボタンを押して")
             USERINPUT.nextLine()
             rule()
-        } while (status == false)
+        } while (!status)
     }
 
+    /**
+     * 負け条件のメソッド。
+     */
     fun loseCondition() {
-        try {
-            Thread.sleep(1000)
-        } catch (e: InterruptedException) {
-            // TODO Auto-generated catch block
-            e.printStackTrace()
-        }
-
+        //プレイヤーHPを無くなったら、終わり。
         if (player1.playerHP >= 0) {
             println("")
-            println("GAME OVER")
+            println("ゲームオーバー")
             score()
         }
         exitProcess(0)
     }
 
+    /**
+     * 勝ち条件のメソッド。
+     */
     fun winCondition() {
-        try {
-            Thread.sleep(1000)
-        } catch (e: InterruptedException) {
-            // TODO Auto-generated catch block
-            e.printStackTrace()
-        }
-
+        //ボスを倒したら、勝ちのフラグがもらう。それで、入口にちゃんと戻ったら、ゲーム終了。
         if (Move.flag === 1) {
             println("")
-            println("WIN")
+            println("勝った！")
         }
         score += 200
         score()
         println("")
-        System.exit(0)
+        exitProcess(0)
     }
 
+    /**
+     * スコアのメソッド。
+     * ある宝　x　１００
+     * レーダーをあまり使わないと　→　残りレーダー　x　１００
+     * その総計でスコアが出します。
+     */
     fun score() {
         player1.takara *= 100
         score += player1.takara
@@ -157,11 +172,11 @@ class Kotlinraider {
         }
         if (player1.radar < 3) {
             score -= (player1.radar * 100)
-            println("Radars left: "+player1.radar)
+            println("残りレーダー： ${player1.radar}")
         } else {
-            println("Radars left: "+player1.radar)
+            println("残りレーダー：${player1.radar}")
         }
-        println("Your score is: ")
+        println("スコア： ")
         println(score)
         println("")
     }
