@@ -470,12 +470,12 @@ class Move {
                     }
                     Kotlinraider.player1.radar--
                     println("")
-                    println("You have: " + Kotlinraider.player1.radar + " more radars")
+                    println("今${Kotlinraider.player1.radar}つのレーダーがあります")
                     moves = false
                     Thread.sleep(3000)
                 } else {
                     println("")
-                    println("ERROR, Invalid input")
+                    println("エラー")
                     println("")
                     moves = false
                 }
