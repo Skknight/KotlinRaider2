@@ -173,13 +173,13 @@ class Move {
                 } else {
                     if (Kotlinraider.enemies.bossHP <= 0) {
                         println("")
-                        println("The boss is dead")
+                        println("ボスはもう死んでいる")
                         println("")
                         break
                     }
                     if (Kotlinraider.player1.smoke < 3) {
                         println("")
-                        println("Boss Room")
+                        println("ボスルーム")
                         println("You have not enough smokes to distract him")
                         println("Prepare to fight the Boss")
                         if (bat1.bossHP >= 0) {
@@ -188,14 +188,14 @@ class Move {
                             bat1.bossBattle()
                         } else {
                             println("")
-                            println("The boss is dead")
+                            println("ボスはもう死んでいる")
                             println("")
                         }
                     }
 
                     if (Kotlinraider.player1.smoke >= 3) {
                         println("")
-                        println("Boss Room")
+                        println("ボスルーム")
                         println("You have enough smokes to distract him and fight")
                         println("Use smoke? (y/n)")
                         val sms = `in`.next()
@@ -221,7 +221,7 @@ class Move {
                                         bat1.bossBattle()
                                     } else {
                                         println("")
-                                        println("Boss is dead")
+                                        println("ボスはもう死んでいる")
                                         println("")
                                     }
                                 }
@@ -234,7 +234,7 @@ class Move {
                                 bat1.bossBattle()
                             } else {
                                 println("")
-                                println("The Boss is dead")
+                                println("ボスはもう死んでいる")
                                 println("")
                             }
                         } else {
@@ -295,7 +295,7 @@ class Move {
             //empty
             if (room.cont === "empty") {
                 println("")
-                println("Room is Empty")
+                println("部屋の中に何もない")
                 println("")
             }
             //check boss
