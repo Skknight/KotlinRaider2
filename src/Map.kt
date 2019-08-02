@@ -1,27 +1,37 @@
 import constants.Directions
 import java.util.*
 
+/**
+ * マップのクラス
+ * ５x５のマップを作成
+ */
+
 class Map {
     var random = Random()
+    //ルームの2次元配列
     val roomArray = Array(10, {arrayOf<ROOMS>(ROOMS(), ROOMS(), ROOMS(), ROOMS(), ROOMS(), ROOMS(), ROOMS(), ROOMS(), ROOMS(), ROOMS())})
 
     var x = 2
     var y = 0
 
+    /**
+     * マップのコンストラクタ
+     */
     fun map() {
-        //enemy
+        //敵のカウンタ
         var d = 0
-        //loot
+        //宝のカウンタ
         var f = 20
-        //sword
+        //剣のカウンタ
         var z = 0
-        //enmaku
+        //煙幕のカウンタ
         var c = 0
-        //Boss
+        //ボスのカウンタ
         var b = 0
-        //empty
+        //何もないのカウンタ
         var e = 0
 
+        //それそれのルームの入口と出口の設定
         var i = 0
         while (i < 5) {
             for (j in 0..4) {
@@ -57,64 +67,64 @@ class Map {
                         }
                     }
 
-                    // check
+                    //出口確認
                     var cont = 0
                     if (directions == Directions.None) {
                         cont++
-                    }
-
-                    if (cont >= 1) {
-                        v = 0
+                        if (cont >= 1) {
+                            v = 0
+                        }
                     }
                     v++
-
                 }
 
-
-                if ((i == y) and (j == x)) {//checks
+                //部屋の中にプレイヤーがいる
+                if ((i == y) and (j == x)) {
                     room.cont = "Player"
                     room.enmaku = 1
-                    //println(" PLAYER ")
                     continue
                 }
 
-
+                //部屋の中に宝がある
                 if (room.cont.equals("loot") && f >= 0) {
                     room.takara = random.nextInt(3) + 1
-                    //println(" Loot:"+room.takara)
                     f--
-                } else if (room.cont.equals("enemy") && d != 2) {
+                } else
+                    //部屋の中に敵がいる
+                    if (room.cont.equals("enemy") && d != 2) {
                     room.enemy = 1
-                    //println(" "+room.cont+ " ")
                     d++
-                } else if (room.cont.equals("enmaku") && c != 4) {
+                } else
+                    //部屋の中に煙幕がある
+                    if (room.cont.equals("enmaku") && c != 4) {
                     room.enmaku = 1
-                    //println( " enmaku ");
                     c++
-                } else if (room.cont.equals("sword") && z != 2) {
+                } else
+                    //部屋の中に剣がある
+                    if (room.cont.equals("sword") && z != 2) {
                     room.sword = 1
-                    //println(" sword ");
                     z++
                     if (i == 5 && z != 0) {
                         i = 0
                     }
-                } else if (room.cont.equals("enemy") && d == 2 && b != 1) {
+                } else
+                    //部屋の中にボスがいる
+                    if (room.cont.equals("enemy") && d == 2 && b != 1) {
                     room.cont = "boss"
                     room.boss = 1
                     room.takara = 4
-                    //println(" BOSS ")
-                    //roomArray[i][j].contents();
                     b++
-                } else if (room.cont.equals("empty") && e <= 6) {
-                    //println(" Empty ")
+                } else
+                    //部屋の中に何もない
+                    if (room.cont.equals("empty") && e <= 6) {
                     e++
                 } else {
+                    //部屋の中に宝がある
                     room.cont = "loot"
                     room.takara = random.nextInt(3) + 3
-                    //println(" Loot: "+room.takara);
                 }
             }
-            //printlnln("");
+            //部屋の中にある物の確認（量）
             if (i == 4 && b <= 0) {
                 i = 0
             }
@@ -122,6 +132,9 @@ class Map {
         }
     }
 
+    /**
+     * 部屋の中にの設定
+     */
     fun inside(): String {
         var contents: String?
         val random = Random()

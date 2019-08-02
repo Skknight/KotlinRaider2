@@ -1,7 +1,17 @@
 import constants.Directions
 import java.util.*
 
+@Suppress("DEPRECATED_IDENTITY_EQUALS")
+
+/**
+ * Moveのクラス
+ * プレイヤーを生きている時
+ */
+
 class Move {
+    /**
+     * 勝ちフラグ
+     */
     companion object {
         var flag: Int = 0
         fun flag() {
@@ -10,25 +20,38 @@ class Move {
         }
     }
 
+    /**
+     * movingのメソッド
+     * プレイヤーを動く時
+     */
     fun moving() {
+        //マップを作成
         val map1 = Map()
         map1.map()
+
+        //戦闘設定を作戦
         val bat1 = Battle()
         val random = Random()
+
+        //scanner
         val `in` = Scanner(System.`in`)
 
-        val gameActive = true
+        //プレイヤーの開始位置
         var x = map1.x
         var y = map1.y
 
+        //ゲームを実行している時
+        val gameActive = true
         while (gameActive) {
-            //map
+            //ゲームUIの画面
             println("プレイヤーHP： ${Kotlinraider.player1.playerHP}")
+            println("剣: ${Kotlinraider.player1.playerWeapon}")
             println("煙幕: ${Kotlinraider.player1.smoke}")
             println("宝: ${Kotlinraider.player1.takara}")
             println("レーダー: ${Kotlinraider.player1.radar}")
             println("")
             println("マップ:")
+            //マップを印刷
             for (i in 0..4) {// prints columns
                 for (j in 0..4) {//prints rows
                     if ((i == y) and (j == x)) {//checks
@@ -40,14 +63,14 @@ class Move {
                 println("")
             }
 
-            //directions
+            //行ける方法設定
             var left = 0
             var right = 0
             var up = 0
             var down = 0
 
+            //部屋の中にどこに出口があるます
             val room = map1.roomArray[y][x]
-
             for (i in 0..3) {
                 val door = room.exit[i]
                 if (door == Directions.Left) {
@@ -64,6 +87,7 @@ class Move {
                 }
             }
 
+            //部屋の出口の印刷
             println("")
             if (left >= 1) {
                 println("左に行けます")
@@ -79,7 +103,7 @@ class Move {
             }
             println("")
 
-            //Player
+            //入口と出口の印刷
             if (room.cont === "Player") {
                 if (flag == 0) {
                     println("")
@@ -92,13 +116,15 @@ class Move {
                 }
             }
 
-            //Battle
+            //戦闘
             if (room.cont === "enemy") {
+                //敵のHPがゼロの場合
                 if (Kotlinraider.enemies.enemyHP <= 0) {
                     println("")
                     println("敵はもう死んでいる")
                     println("")
                 } else {
+                    //煙幕がない場合
                     if (Kotlinraider.player1.smoke === 0) {
                         println("")
                         println("煙幕もうない")
@@ -112,15 +138,23 @@ class Move {
                             println("敵はもう死んでいる")
                             println("")
                         }
-                    } else if (Kotlinraider.player1.smoke >= 0) {
+
+                    } else
+                        //煙幕がある場合
+                        if (Kotlinraider.player1.smoke >= 0) {
                         println("")
+                        println("敵だ！！")
                         println("部屋の中に敵がいます")
+                        //煙幕を使う選択
                         println("煙幕を使うか? (y/n)")
                         val sm = `in`.next()
+                        //煙幕を使う時
                         if (sm == "y") {
-                            var stealth = 0
+                            //ステルス状態の実行
+                            var stealth: Int
                             if (Kotlinraider.player1.smoke !== 0) {
                                 stealth = random.nextInt(4) + 5
+                                //ステルス状態が大丈夫時
                                 if (room.status <= stealth) {
                                     println("部屋のステルス状態は: ${room.status} ")
                                     println("お前のステルス状態は: $stealth")
@@ -129,12 +163,15 @@ class Move {
                                     println("")
                                     println("敵をそらった！ 早く逃げろ！")
                                     println("")
+                                    //ステルス状態が大丈夫じゃない時
                                 } else {
+                                    println("部屋のステルス状態は: ${room.status} ")
+                                    println("お前のステルス状態は: $stealth")
                                     println("ステルス状態はが足りない")
                                     println("戦うしかない")
                                     if (bat1.EnemyHP >= 0) {
                                         println("")
-                                        println("敵")
+                                        println("敵！")
                                         bat1.battle()
                                     } else {
                                         println("")
@@ -143,6 +180,7 @@ class Move {
                                     }
                                 }
                             }
+                            //煙幕を使わない時
                         } else if (sm == "n") {
                             println("")
                             println("戦うしかない")
@@ -155,6 +193,7 @@ class Move {
                                 println("敵はもう死んでいる")
                                 println("")
                             }
+                            //入力エラー
                         } else {
                             println("誤った入力")
                             println("")
@@ -164,19 +203,15 @@ class Move {
                 }
             }
 
-            //boss
+            //ボスと戦闘
             if (room.cont === "boss") {
+                //ボスのHPがゼロの場合
                 if (Kotlinraider.enemies.bossHP <= 0) {
                     println("")
                     println("ボスはもう死んでいる")
                     println("")
                 } else {
-                    if (Kotlinraider.enemies.bossHP <= 0) {
-                        println("")
-                        println("ボスはもう死んでいる")
-                        println("")
-                        break
-                    }
+                    //煙幕がない場合
                     if (Kotlinraider.player1.smoke < 3) {
                         println("")
                         println("ボスルーム")
@@ -192,24 +227,26 @@ class Move {
                             println("")
                         }
                     }
-
+                    //煙幕がある場合
                     if (Kotlinraider.player1.smoke >= 3) {
                         println("")
                         println("ボスルーム")
-                        println("お前はボスをそらすのに十分な煙幕があります！")
+                        println("お前はボスをそらすのに十分な煙幕があります！（煙幕：３）")
+                        //煙幕を使う選択
                         println("使うか? (y/n)")
                         val sms = `in`.next()
+                        //煙幕を使う時
                         if (sms == "y") {
-                            var stealth = 0
+                            var stealth: Int
                             if (Kotlinraider.player1.smoke >= 3) {
                                 stealth = 10
                                 if (room.status <= stealth) {
-                                    println("ステルス状態: $stealth")
                                     Kotlinraider.player1.smoke = 0
-                                    println("煙幕: ${Kotlinraider.player1.smoke}")
                                     Kotlinraider.enemies.bossHP = 200
+                                    Kotlinraider.player1.smoke = 150
                                     println("ボスはお前を見えない！!")
                                     println("ボスHPが半分にカット！")
+                                    println("プレイヤーHP回復！!")
                                     println("")
                                     bat1.bossBattle()
                                 } else {
@@ -226,6 +263,7 @@ class Move {
                                     }
                                 }
                             }
+                            //煙幕を使わない時
                         } else if (sms == "n") {
                             println("戦うしかない")
                             if (bat1.bossHP >= 0) {
@@ -237,6 +275,7 @@ class Move {
                                 println("ボスはもう死んでいる")
                                 println("")
                             }
+                            //入力エラー
                         } else {
                             println("")
                             println("誤った入力")
@@ -247,7 +286,7 @@ class Move {
                 }
             }
 
-            //weapon
+            //剣を見つかる設定
             if (room.cont === "sword") {
                 if (room.sword !== 0) {
                     Kotlinraider.player1.playerWeapon = 2
@@ -262,7 +301,7 @@ class Move {
                 }
             }
 
-            //loot
+            //宝を見つかる設定
             if (room.cont === "loot") {
                 if (room.takara !== 0) {
                     println("")
@@ -278,7 +317,8 @@ class Move {
                     println("")
                 }
             }
-            //smoke
+
+            //煙幕を見つかる設定
             if (room.cont === "enmaku") {
                 if (room.enmaku !== 0) {
                     println("煙幕を手に入れた")
@@ -292,42 +332,55 @@ class Move {
                     println("")
                 }
             }
-            //empty
+
+            //部屋に何もない時
             if (room.cont === "empty") {
                 println("")
                 println("部屋の中に何もない")
                 println("")
             }
-            //check boss
+
+            //「ボスは近いか』の設定
             for (t in 0..4) {
                 for (g in 0..4) {
                     var bossRoom = map1.roomArray[t][g]
                     if ((t == y) and (g == x)) {
                         continue
-                    } else if ((t == y) and (g == x - 1)) {
+                    } else
+                        //左にいる場合
+                        if ((t == y) and (g == x - 1)) {
                         if (bossRoom.cont.equals("boss")) {
-                            print("ボスが近い")
+                            println("ボスが近い")
+                            println("レーダーを使うかな")
                             println("")
                         } else {
                             print("")
                         }
-                    } else if ((t == y) and (g == x + 1)) {
+                    } else //右にいる場合
+                        if ((t == y) and (g == x + 1)) {
                         if (bossRoom.cont.equals("boss")) {
-                            print("ボスが近い")
+                            println("ボスが近い")
+                            println("レーダーを使うかな")
                             println("")
                         } else {
                             print("")
                         }
-                    } else if ((t == y + 1) and (g == x)) {
+                    } else
+                        //上にいる場合
+                        if ((t == y + 1) and (g == x)) {
                         if (bossRoom.cont.equals("boss")) {
-                            print("ボスが近い")
+                            println("ボスが近い")
+                            println("レーダーを使うかな")
                             println("")
                         } else {
                             print("")
                         }
-                    } else if ((t == y - 1) and (g == x)) {
+                    } else
+                        //下にいる場合
+                        if ((t == y - 1) and (g == x)) {
                         if (bossRoom.cont.equals("boss")) {
-                            print("ボスが近い")
+                            println("ボスが近い")
+                            println("レーダーを使うかな")
                             println("")
                         } else {
                             print("")
@@ -337,28 +390,31 @@ class Move {
                 }
             }
 
-            //move and reset);
+            //コントロール設定
             println("")
             println("コントロール w, a, s, d (それそれ：上、左、下、右)")
             println("レーダーを使うため r を入力")
             println("リセットなら１を入力")
             val move = `in`.next()
 
+            // スペーシング
             for (i in 0..20) {
                 println("")
             }
 
             println("------------------------")
 
-            //Quits
+            //リセット
             if (move == "1") {
                 println("リセット!")
                 newGame()
             }
-            //movement commands
+
+            //コントロールのコマンド
             var moves = true
             while (moves) {
                 var ok = 0
+                //上にいる場合
                 if (move == "w") {
                     for (v in 0..3) {
                         val enteredDoor = room.exit[v]
@@ -376,7 +432,9 @@ class Move {
                         println("もう一度入力して")
                         moves = false
                     }
-                } else if (move == "s") {
+                } else
+                    //下にいる場合
+                    if (move == "s") {
                     ok = 0
                     for (v in 0..3) {
                         val enteredDoor = room.exit[v]
@@ -394,7 +452,9 @@ class Move {
                         println("もう一度入力して")
                         moves = false
                     }
-                } else if (move == "a") {
+                } else
+                    //左にいる場合
+                    if (move == "a") {
                     ok = 0
                     for (v in 0..3) {
                         val enteredDoor = room.exit[v]
@@ -412,7 +472,9 @@ class Move {
                         println("もう一度入力して")
                         moves = false
                     }
-                } else if (move == "d") {
+                } else
+                    //右にいる場合
+                    if (move == "d") {
                     ok = 0
                     for (v in 0..3) {
                         val enteredDoor = room.exit[v]
@@ -430,7 +492,9 @@ class Move {
                         println("もう一度入力して")
                         moves = false
                     }
-                } else if (move == "r") {
+                } else
+                    //レーダー設定
+                    if (move == "r" && Kotlinraider.player1.radar != 0) {
                     for (d in 0..4) {
                         for (f in 0..4) {
                             val scannedRoom = map1.roomArray[d][f]
@@ -470,7 +534,7 @@ class Move {
                     }
                     Kotlinraider.player1.radar--
                     println("")
-                    println("今${Kotlinraider.player1.radar}つのレーダーがあります")
+                    println("今${Kotlinraider.player1.radar}つのレーダーが持っています")
                     moves = false
                     Thread.sleep(3000)
                 } else {
