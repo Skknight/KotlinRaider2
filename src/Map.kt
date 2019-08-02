@@ -3,7 +3,6 @@ import java.util.*
 
 class Map {
     var random = Random()
-    //val roomArray = Array(10, {arrayOfNulls<ROOMS>(10)})
     val roomArray = Array(10, {arrayOf<ROOMS>(ROOMS(), ROOMS(), ROOMS(), ROOMS(), ROOMS(), ROOMS(), ROOMS(), ROOMS(), ROOMS(), ROOMS())})
 
     var x = 2
@@ -38,29 +37,29 @@ class Map {
                     room.exit[v] = directions
 
                     if (i == 0) {
-                        if (directions.equals(Directions.up)) {
-                            room.exit[v] = Directions.none
+                        if (directions == Directions.Up) {
+                            room.exit[v] = Directions.None
                         }
                     }
                     if (j == 0) {
-                        if (room.exit[v]!!.equals(Directions.left)) {
-                            room.exit[v] = Directions.none
+                        if (directions == Directions.Left) {
+                            room.exit[v] = Directions.None
                         }
                     }
                     if (i == 4) {
-                        if (room.exit[v]!!.equals(Directions.down)) {
-                            room.exit[v] = Directions.none
+                        if (directions == Directions.Down) {
+                            room.exit[v] = Directions.None
                         }
                     }
                     if (j == 4) {
-                        if (room.exit[v]!!.equals(Directions.right)) {
-                            room.exit[v] = Directions.none
+                        if (directions == Directions.Right) {
+                            room.exit[v] = Directions.None
                         }
                     }
 
                     // check
                     var cont = 0
-                    if (room.exit[v]!!.equals(Directions.none)) {
+                    if (directions == Directions.None) {
                         cont++
                     }
 
@@ -124,7 +123,7 @@ class Map {
     }
 
     fun inside(): String {
-        var contents: String? = null
+        var contents: String?
         val random = Random()
         val name: Int
 

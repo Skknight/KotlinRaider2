@@ -2,10 +2,8 @@ import constants.Directions
 import java.util.*
 
 class Move {
-    var USERINPUT = Scanner(System.`in`)
     companion object {
         var flag: Int = 0
-
         fun flag() {
             flag = 1
             return
@@ -19,19 +17,18 @@ class Move {
         val random = Random()
         val `in` = Scanner(System.`in`)
 
-        var gameActive = true
+        val gameActive = true
         var x = map1.x
         var y = map1.y
 
         while (gameActive) {
-
             //map
-            println("PlayerHP is:" + Kotlinraider.player1.playerHP)
-            println("Smoke Bombs:  " + Kotlinraider.player1.smoke)
-            println("Treasure: " + Kotlinraider.player1.takara)
-            println("Radar: " + Kotlinraider.player1.radar)
+            println("プレイヤーHP： " + Kotlinraider.player1.playerHP)
+            println("煙幕:  " + Kotlinraider.player1.smoke)
+            println("宝: " + Kotlinraider.player1.takara)
+            println("レーダー: " + Kotlinraider.player1.radar)
             println("")
-            println("Mini Map:")
+            println("マップ:")
             for (i in 0..4) {// prints columns
                 for (j in 0..4) {//prints rows
                     if ((i == y) and (j == x)) {//checks
@@ -42,124 +39,124 @@ class Move {
                 }
                 println("")
             }
+
             //directions
-            //Thread.sleep(1000)
             var left = 0
             var right = 0
             var up = 0
             var down = 0
 
-            var room= map1.roomArray[y][x]
+            val room = map1.roomArray[y][x]
 
             for (i in 0..3) {
-                var door = room.exit[i]
-                if (door == Directions.left) {
+                val door = room.exit[i]
+                if (door == Directions.Left) {
                     left++
                 }
-                if (door == Directions.right) {
+                if (door == Directions.Right) {
                     right++
                 }
-                if (door == Directions.up) {
+                if (door == Directions.Up) {
                     up++
                 }
-                if (door == Directions.down) {
+                if (door == Directions.Down) {
                     down++
                 }
             }
 
             println("")
             if (left >= 1) {
-                println("You can move left")
+                println("左に行けます")
             }
             if (right >= 1) {
-                println("You can move right")
+                println("右に行けます")
             }
             if (up >= 1) {
-                println("You can move up")
+                println("上に行けます")
             }
             if (down >= 1) {
-                println("You can move down")
+                println("下に行けます")
             }
             println("")
 
             //Player
-            if (map1.roomArray[y][x]!!.cont === "Player") {
+            if (room.cont === "Player") {
                 if (flag == 0) {
                     println("")
-                    println("You are at the start")
+                    println("入口にいます")
                     println("")
                 } else {
                     println("")
-                    println("You did it!")
+                    println("できた！！")
                     Kotlinraider().winCondition()
                 }
             }
 
             //Battle
-            if (map1.roomArray[y][x]!!.cont === "enemy") {
+            if (room.cont === "enemy") {
                 if (Kotlinraider.enemies.enemyHP <= 0) {
                     println("")
-                    println("Enemy is dead")
+                    println("敵はもう死んでいる")
                     println("")
                 } else {
                     if (Kotlinraider.player1.smoke === 0) {
                         println("")
-                        println("You have no smokes")
-                        println("Prepare to fight")
+                        println("煙幕もうない")
+                        println("戦うしかない")
                         if (bat1.EnemyHP >= 0) {
                             println("")
-                            println("ENEMY")
+                            println("敵！")
                             bat1.battle()
                         } else {
                             println("")
-                            println("Enemy is dead")
+                            println("敵はもう死んでいる")
                             println("")
                         }
                     } else if (Kotlinraider.player1.smoke >= 0) {
                         println("")
-                        println("Enemy in the room")
-                        println("Use smoke? (y/n)")
+                        println("部屋の中に敵がいます")
+                        println("煙幕を使うか? (y/n)")
                         val sm = `in`.next()
                         if (sm == "y") {
                             var stealth = 0
                             if (Kotlinraider.player1.smoke !== 0) {
                                 stealth = random.nextInt(4) + 5
-                                if (map1.roomArray[y][x]!!.status <= stealth) {
-                                    System.out.println("Room stealth status is: " + map1.roomArray[y][x]!!.status)
-                                    println("Your stealth status is: $stealth")
+                                if (room.status <= stealth) {
+                                    println("部屋のステルス状態は: " + room.status)
+                                    println("お前のステルス状態は: $stealth")
                                     Kotlinraider.player1.smoke--
-                                    System.out.println("Smoke left: ${Kotlinraider.player1.smoke}")
+                                    println("煙幕: ${Kotlinraider.player1.smoke}")
                                     println("")
-                                    println("You distracted the enemy! Get out of there!")
+                                    println("敵をそらった！ 早く逃げろ！")
                                     println("")
                                 } else {
-                                    println("Your Status is too visible")
-                                    println("You have to fight")
+                                    println("ステルス状態はが足りない")
+                                    println("戦うしかない")
                                     if (bat1.EnemyHP >= 0) {
                                         println("")
-                                        println("ENEMY")
+                                        println("敵")
                                         bat1.battle()
                                     } else {
                                         println("")
-                                        println("Enemy is dead")
+                                        println("敵はもう死んでいる")
                                         println("")
                                     }
                                 }
                             }
                         } else if (sm == "n") {
                             println("")
-                            println("Prepare to fight")
+                            println("戦うしかない")
                             if (bat1.EnemyHP >= 0) {
                                 println("")
-                                println("ENEMY")
+                                println("敵")
                                 bat1.battle()
                             } else {
                                 println("")
-                                println("Enemy is dead")
+                                println("敵はもう死んでいる")
                                 println("")
                             }
                         } else {
-                            println("Incorrect input")
+                            println("誤った入力")
                             println("")
                             continue
                         }
@@ -168,7 +165,7 @@ class Move {
             }
 
             //boss
-            if (map1.roomArray[y][x]!!.cont === "boss") {
+            if (room.cont === "boss") {
                 if (Kotlinraider.enemies.bossHP <= 0) {
                     println("")
                     println("The boss is dead")
@@ -180,7 +177,7 @@ class Move {
                         println("")
                         break
                     }
-                    if (Kotlinraider.player1.smoke <= 3) {
+                    if (Kotlinraider.player1.smoke < 3) {
                         println("")
                         println("Boss Room")
                         println("You have not enough smokes to distract him")
@@ -206,10 +203,10 @@ class Move {
                             var stealth = 0
                             if (Kotlinraider.player1.smoke >= 3) {
                                 stealth = 10
-                                if (map1.roomArray[y][x]!!.status <= stealth) {
+                                if (room.status <= stealth) {
                                     println("Your stealth status is: $stealth")
                                     Kotlinraider.player1.smoke = 0
-                                    System.out.println("Smoke left: " + Kotlinraider.player1.smoke)
+                                    println("Smoke left: " + Kotlinraider.player1.smoke)
                                     Kotlinraider.enemies.bossHP = 200
                                     println("Boss can't see you!")
                                     println("Boss HP is cut in half!")
@@ -251,13 +248,13 @@ class Move {
             }
 
             //weapon
-            if (map1.roomArray[y][x]!!.cont === "sword") {
-                if (map1.roomArray[y][x]?.sword !== 0) {
+            if (room.cont === "sword") {
+                if (room.sword !== 0) {
                     Kotlinraider.player1.playerWeapon = 2
                     println("")
                     println("You got a Sword")
                     println("")
-                    map1.roomArray[y][x]!!.sword = 0
+                    room.sword = 0
                 } else {
                     println("")
                     println("There was a sword here")
@@ -266,13 +263,13 @@ class Move {
             }
 
             //loot
-            if (map1.roomArray[y][x]!!.cont === "loot") {
-                if (map1.roomArray[y][x]!!.takara !== 0) {
+            if (room.cont === "loot") {
+                if (room.takara !== 0) {
                     println("")
                     println("Treasure!")
-                    Kotlinraider.player1.takara += map1.roomArray[y][x]!!.takara
-                    println("You found: "+ map1.roomArray[y][x]!!.takara)
-                    map1.roomArray[y][x]!!.takara = 0
+                    Kotlinraider.player1.takara += room.takara
+                    println("You found: "+ room.takara)
+                    room.takara = 0
                     println("You now have ${Kotlinraider.player1.takara} pieces of Gold")
                     println("")
                 } else {
@@ -282,13 +279,13 @@ class Move {
                 }
             }
             //smoke
-            if (map1.roomArray[y][x]!!.cont === "enmaku") {
-                if (map1.roomArray[y][x]!!.enmaku !== 0) {
-                    println("Found a Smoke Bomb")
+            if (room.cont === "enmaku") {
+                if (room.enmaku !== 0) {
+                    println("煙幕を手に入れた")
                     Kotlinraider.player1.smoke++
-                    println("You now have: " + Kotlinraider.player1.smoke + " Smoke Bombs")
+                    println(""+Kotlinraider.player1.smoke + " の煙幕があります")
                     println("")
-                    map1.roomArray[y][x]!!.enmaku = 0
+                    room.enmaku = 0
                 } else {
                     println("")
                     println("Room is Empty")
@@ -296,7 +293,7 @@ class Move {
                 }
             }
             //empty
-            if (map1.roomArray[y][x]!!.cont === "empty") {
+            if (room.cont === "empty") {
                 println("")
                 println("Room is Empty")
                 println("")
@@ -304,31 +301,32 @@ class Move {
             //check boss
             for (t in 0..4) {
                 for (g in 0..4) {
+                    var bossRoom = map1.roomArray[t][g]
                     if ((t == y) and (g == x)) {
                         continue
                     } else if ((t == y) and (g == x - 1)) {
-                        if (map1.roomArray[t][g]!!.cont.equals("boss")) {
+                        if (bossRoom.cont.equals("boss")) {
                             print("Boss feels close")
                             println("")
                         } else {
                             print("")
                         }
                     } else if ((t == y) and (g == x + 1)) {
-                        if (map1.roomArray[t][g]!!.cont.equals("boss")) {
+                        if (bossRoom.cont.equals("boss")) {
                             print("Boss feels close")
                             println("")
                         } else {
                             print("")
                         }
                     } else if ((t == y + 1) and (g == x)) {
-                        if (map1.roomArray[t][g]!!.cont.equals("boss")) {
+                        if (bossRoom.cont.equals("boss")) {
                             print("Boss feels close")
                             println("")
                         } else {
                             print("")
                         }
                     } else if ((t == y - 1) and (g == x)) {
-                        if (map1.roomArray[t][g]!!.cont.equals("boss")) {
+                        if (bossRoom.cont.equals("boss")) {
                             print("Boss feels close")
                             println("")
                         } else {
@@ -356,17 +354,15 @@ class Move {
             if (move == "1") {
                 println("GAME RESET!")
                 newGame()
-                //gameActive = false
-                //break
             }
             //movement commands
             var moves = true
             while (moves) {
                 var ok = 0
                 if (move == "u") {
-
                     for (v in 0..3) {
-                        if (map1.roomArray[y][x]!!.exit[v]!!.equals(Directions.up)) {
+                        val enteredDoor = room.exit[v]
+                        if (enteredDoor == Directions.Up) {
                             ok = 1
                             continue
                         }
@@ -378,13 +374,13 @@ class Move {
                     } else {
                         println("Can't move that way")
                         println("Try again")
-                        //break;
                         moves = false
                     }
                 } else if (move == "d") {
                     ok = 0
                     for (v in 0..3) {
-                        if (map1.roomArray[y][x]!!.exit[v]!!.equals(Directions.down)) {
+                        val enteredDoor = room.exit[v]
+                        if (enteredDoor == Directions.Down) {
                             ok = 1
                             continue
                         }
@@ -396,13 +392,13 @@ class Move {
                     } else {
                         println("Can't move that way")
                         println("Try again")
-                        //break;
                         moves = false
                     }
                 } else if (move == "l") {
                     ok = 0
                     for (v in 0..3) {
-                        if (map1.roomArray[y][x]!!.exit[v]!!.equals(Directions.left)) {
+                        val enteredDoor = room.exit[v]
+                        if (enteredDoor == Directions.Left) {
                             ok = 1
                             continue
                         }
@@ -414,13 +410,13 @@ class Move {
                     } else {
                         println("Can't move that way")
                         println("Try again")
-                        //break;
                         moves = false
                     }
                 } else if (move == "r") {
                     ok = 0
                     for (v in 0..3) {
-                        if (map1.roomArray[y][x]!!.exit[v]!!.equals(Directions.right)) {
+                        val enteredDoor = room.exit[v]
+                        if (enteredDoor == Directions.Right) {
                             ok = 1
                             continue
                         }
@@ -432,38 +428,38 @@ class Move {
                     } else {
                         println("Can't move that way")
                         println("Try again")
-                        //break;
                         moves = false
                     }
                 } else if (move == "radar") {
                     for (d in 0..4) {
                         for (f in 0..4) {
+                            val scannedRoom = map1.roomArray[d][f]
                             if ((d == y) and (f == x)) {
                                 print("PLA ")
                                 continue
                             } else if ((d == y) and (f == x - 1)) {
-                                if (map1.roomArray[d][f]!!.cont.equals("Player")) {
+                                if (scannedRoom.cont.equals("Player")) {
                                     print("Start ")
                                 } else {
-                                    print(map1.roomArray[d][f]!!.cont + " ")
+                                    print(scannedRoom.cont + " ")
                                 }
                             } else if ((d == y) and (f == x + 1)) {
-                                if (map1.roomArray[d][f]!!.cont.equals("Player")) {
+                                if (scannedRoom.cont.equals("Player")) {
                                     print("Start ")
                                 } else {
-                                    print(map1.roomArray[d][f]!!.cont + " ")
+                                    print(scannedRoom.cont + " ")
                                 }
                             } else if ((d == y + 1) and (f == x)) {
-                                if (map1.roomArray[d][f]!!.cont.equals("Player")) {
+                                if (scannedRoom.cont.equals("Player")) {
                                     print("Start ")
                                 } else {
-                                    print(map1.roomArray[d][f]!!.cont + " ")
+                                    print(scannedRoom.cont + " ")
                                 }
                             } else if ((d == y - 1) and (f == x)) {
-                                if (map1.roomArray[d][f]!!.cont.equals("Player")) {
+                                if (scannedRoom.cont.equals("Player")) {
                                     print("Start ")
                                 } else {
-                                    print(map1.roomArray[d][f]!!.cont + " ")
+                                    print(scannedRoom.cont + " ")
                                 }
                             } else {
                                 print("XXX ")
@@ -481,7 +477,6 @@ class Move {
                     println("")
                     println("ERROR, Invalid input")
                     println("")
-                    //break;
                     moves = false
                 }
             }

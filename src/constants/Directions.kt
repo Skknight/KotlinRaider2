@@ -1,5 +1,5 @@
 package constants
 
 enum class Directions {
-    none, up, down, left, right
+    None, Up, Down, Left, Right
 }

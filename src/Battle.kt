@@ -7,8 +7,6 @@ class Battle {
     var PlayerHP: Int = 0
     var EnemyHP: Int = 0
     var sword = 0
-    var count = 0
-    var score: Double = 0.toDouble()
     var enemyAT = 1.05
     var weaponAT = 1.5
     var dualweapon = 1.7
