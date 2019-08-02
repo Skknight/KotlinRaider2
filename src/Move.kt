@@ -168,7 +168,7 @@ class Move {
             if (room.cont === "boss") {
                 if (Kotlinraider.enemies.bossHP <= 0) {
                     println("")
-                    println("The boss is dead")
+                    println("ボスはもう死んでいる")
                     println("")
                 } else {
                     if (Kotlinraider.enemies.bossHP <= 0) {
