@@ -48,33 +48,33 @@ class Map {
                     room.exit[v] = directions
 
                     if (i == 0) {
-                        if (directions == Directions.Up) {
+                        if (directions === Directions.Up) {
                             room.exit[v] = Directions.None
                         }
                     }
                     if (j == 0) {
-                        if (directions == Directions.Left) {
+                        if (directions === Directions.Left) {
                             room.exit[v] = Directions.None
                         }
                     }
                     if (i == 4) {
-                        if (directions == Directions.Down) {
+                        if (directions === Directions.Down) {
                             room.exit[v] = Directions.None
                         }
                     }
                     if (j == 4) {
-                        if (directions == Directions.Right) {
+                        if (directions === Directions.Right) {
                             room.exit[v] = Directions.None
                         }
                     }
 
                     //出口確認
                     var cont = 0
-                    if (directions == Directions.None) {
+                    if (directions === Directions.None) {
                         cont++
-                        if (cont >= 1) {
-                            v = 0
-                        }
+                    }
+                    if (cont >=  1) {
+                        v = 0
                     }
                     v++
                 }
